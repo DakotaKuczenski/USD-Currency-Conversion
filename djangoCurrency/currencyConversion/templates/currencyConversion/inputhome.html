@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{#{% load staticfiles %}#}
+
+{% block body %}
+
+<div class="container text-center">
+
+    <br/>
+    <br/>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+    <button type="submit" name="convert">Convert</button>
+
+    </form>
+
+    <br/>
+    <br/>
+    <h3>Result:  {{ result }}</h3>
+
+</div>
+
+{% endblock %}
